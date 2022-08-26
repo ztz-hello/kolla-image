@@ -21,7 +21,7 @@ env:
   INSTALL_TYPE: source
   OPENSTACK_RELEASE: wallaby
   ALIYUN_REGISTRY: registry.cn-hangzhou.aliyuncs.com
-  ALIYUN_NAMESPACE: kollaimage
+  ALIYUN_NAMESPACE: kolla
 
 jobs:
   get-kolla-images:
