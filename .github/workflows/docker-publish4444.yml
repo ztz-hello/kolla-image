@@ -33,7 +33,7 @@ jobs:
 
     # Log into aliyun registry
     - name: Log into aliyun registry
-      run:  docker login registry.cn-hangzhou.aliyuncs.com --username=helloz --password=2561980937@ztz
+      run:  echo "${{ secrets.ALIYUN_PASSWORD }}" | docker login registry.cn-hangzhou.aliyuncs.com --username=helloz --password-stdin
       
     # clone kolla repo
     - name: clone kolla repo
