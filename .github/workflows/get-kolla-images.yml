@@ -17,11 +17,11 @@ on:
 
 env:
   DOCKER_NAMESPACE: kolla
-  KOLLA_BASE_DISTRO: centos
+  KOLLA_BASE_DISTRO: ubuntu
   INSTALL_TYPE: source
-  OPENSTACK_RELEASE: train
-  ALIYUN_REGISTRY: registry.cn-shenzhen.aliyuncs.com
-  ALIYUN_NAMESPACE: kollaimage
+  OPENSTACK_RELEASE: wallaby
+  ALIYUN_REGISTRY: registry.cn-hangzhou.aliyuncs.com
+  ALIYUN_NAMESPACE: kolla
 
 jobs:
   get-kolla-images:
@@ -33,7 +33,7 @@ jobs:
 
     # Log into aliyun registry
     - name: Log into aliyun registry
-      run: echo "${{ secrets.ALIYUN_PASSWORD }}" | docker login $ALIYUN_REGISTRY -u ${{ secrets.ALIYUN_USERNAME }} --password-stdin
+      run:  docker login registry.cn-hangzhou.aliyuncs.com -username=helloz --password=2561980937@ztz
       
     # clone kolla repo
     - name: clone kolla repo
