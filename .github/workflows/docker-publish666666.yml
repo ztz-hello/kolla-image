@@ -1,5 +1,6 @@
 # This workflow will pull kolla ansible docker images from dockerhub, push it to aliyun container registry.
 #
+
 # To configure this workflow:
 #
 # 1. Set up secrets in your workspace: 
